@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="lab" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lab Twelve</title>
+    <meta name="viewport" content="width=device-width">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- jQuery link -->
+    <script https://code.jquery.com/jquery-3.2.1.min.js></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+  </head>
+  <body ng-controller="labCtrl">
+
+    <div class="container">
+      <div class="jumbotron">
+      <h3>What-To-Do</h3>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="input">
+            <input type="text" ng-model="items.name">
+            <button ng-click="addToList(items)" type="button" class="btn btn-primary">Add To-Do</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container3">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="search">
+            <input class="search2" type="text" ng-model="search" placeholder="Search To-Do List">
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container4">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-2">
+          <div class="list">
+            <ul>
+              <li ng-repeat="items in toDoList | filter: search">{{items.name}}
+                <button ng-click="remove($index)"type="button" class="btn btn-danger">Remove</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <p ng-repeat="items in toDoList | filter: search">{{items.name}}</p> -->
+
+
+
+    <script src ="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

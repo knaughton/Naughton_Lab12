@@ -1,0 +1,47 @@
+body { padding-top: 75px;}
+
+.jumbotron {
+  background-color: black;
+  opacity: 0.75;
+  color: white;
+  font-family: 'Rock Salt', cursive;
+}
+
+div.input {
+  border: 1px solid;
+  height: auto;
+  width: 100%;
+
+}
+
+li {
+  background-color: #73B5DF;
+  opacity: 0.85;
+  border-radius: 5px;
+  list-style: none;
+  border: 1px solid;
+  height: 50px;
+  margin: 2% 1%;
+  width: 79%;
+  float: right;
+  padding: 10px;
+  display: inline-block;
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 24px;
+}
+
+.btn-danger {
+  float: right;
+}
+
+
+.search2 {
+border: 1px solid;
+position: absolute;
+margin: -13% 27%;
+float: left;
+width: 200px;
+border-radius: 5px;
+background-color: silver;
+color: white;
+}
